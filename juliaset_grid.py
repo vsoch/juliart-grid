@@ -102,8 +102,8 @@ with open("index.html", "w") as filey:
 try:
     import imageio
 
-    outfile = "juliaset_grid.gif"
-    with imageio.get_writer(outfile, mode="I") as writer:
+    outfile = "grid.gif"
+    with imageio.get_writer(outfile, mode="I", duration=1) as writer:
         for pngfile in images:
             writer.append_data(imageio.imread(pngfile))
 except:
